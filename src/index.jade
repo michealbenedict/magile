@@ -1,0 +1,27 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+.Main
+  header.Main-Header
+    h1.Main-Header-title Micheal Benedict
+    h5.Main-Header-description Building the cloud 
+      a(href='http://twitter.com/jobs' target="_blank") @twitter
+
+.u-container
+  hr
+  .Posts
+    {{#foreach posts}}
+    article.Posts-Article(class="{{post_class}}" itemscope itemtype="http://schema.org/BlogPosting" role="article")
+      h1.u-primaryHeader
+        a(href="{{url}}"){{{title}}}
+      time.u-subHeader(datetime="{{date format='YYYY-MM-DD'}}"){{date format="DD MMMM YYYY"}}
+    {{/foreach}}
+
+  hr
+  footer.Footer.u-textCenter
+    a.Footer-subscribe(href='{{@blog.url}}/rss/')
+        | You should subscribe to my RSS feed.
+    section.Footer-copyright
+      | All content copyright
+      a(href='{{@blog.url}}/') {{@blog.title}}
+      | © {{date format="YYYY"}} • All rights reserved.
