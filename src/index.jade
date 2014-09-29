@@ -3,9 +3,8 @@
 
 .Main
   header.Main-Header
-    h1.Main-Header-title Micheal Benedict
-    h5.Main-Header-description Building the cloud 
-      a(href='http://twitter.com/jobs' target="_blank") @twitter
+    h1.Main-Header-title{{@blog.title}}
+    h5.Main-Header-description{{@blog.description}}
 
 .u-container
   hr
@@ -16,12 +15,3 @@
         a(href="{{url}}"){{{title}}}
       time.u-subHeader(datetime="{{date format='YYYY-MM-DD'}}"){{date format="DD MMMM YYYY"}}
     {{/foreach}}
-
-  hr
-  footer.Footer.u-textCenter
-    a.Footer-subscribe(href='{{@blog.url}}/rss/')
-        | You should subscribe to my RSS feed.
-    section.Footer-copyright
-      | All content copyright
-      a(href='{{@blog.url}}/') {{@blog.title}}
-      | © {{date format="YYYY"}} • All rights reserved.

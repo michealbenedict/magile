@@ -18,28 +18,20 @@ var bower       = require('main-bower-files');
 var livereload  = require('gulp-livereload');
 var through     = require('through2');
 var rename      = require('gulp-rename');
+var grimraf     = require('gulp-rimraf');
 
 // CONSTANTS
 // =========
 const PUBLIC_DIR        = "./";
 const PUBLIC_SITE_DIR   = path.join(PUBLIC_DIR);
-const PUBLIC_JS_DIR     = path.join(PUBLIC_DIR, 'assets'. 'js');
-const PUBLIC_CSS_DIR    = path.join(PUBLIC_DIR, 'assets'. 'css');
-const PUBLIC_VENDOR_DIR = path.join(PUBLIC_DIR, 'assets'. 'vendor');
+const PUBLIC_JS_DIR     = path.join(PUBLIC_DIR, 'assets', 'js');
+const PUBLIC_CSS_DIR    = path.join(PUBLIC_DIR, 'assets', 'css');
+const PUBLIC_VENDOR_DIR = path.join(PUBLIC_DIR, 'assets', 'vendor');
 
 const APP_DIR       = "./src";
 const APP_VIEWS_DIR = "./src";
 const APP_SASS_DIR  = "./src/sass";
 const APP_JS_DIR    = "./src/js";
-
-const POST_DIR = "./posts";
-
-var locals = {
-  CSS_PATH: PUBLIC_CSS_DIR,
-  JS_PATH: PUBLIC_JS_DIR,
-  VENDOR_PATH: PUBLIC_VENDOR_DIR,
-  SITE_PATH: '/'
-};
 
 // CLEAN TASKS
 // ===========
@@ -47,8 +39,9 @@ var locals = {
  * @task clean 
  * @description Remove all the files from the public directory
 **/
-gulp.task('clean', function () {
-  rimraf.sync(PUBLIC_DIR);
+gulp.task('clean:templates', function () {
+  return gulp.src('./*.hbs', { read: false })
+    .pipe(grimraf());
 });
 
 /*
@@ -112,8 +105,8 @@ gulp.task('build:js', ['clean:js'], function () {
  * @task build:templates
  * Generate other pages of the site
 **/
-gulp.task('build:templates', function () {
-  gulp.src([APP_VIEWS_DIR + '/*.jade'])
+gulp.task('build:templates', ['clean:templates'], function () {
+  gulp.src([APP_VIEWS_DIR + '/*.jade', '!' + APP_VIEWS_DIR + '/_*.jade'])
     .pipe(jade())
     .pipe(rename(function (path) {
       path.extname = '.hbs';
@@ -126,7 +119,7 @@ gulp.task('build:templates', function () {
  * @task build:site
  * Generate the site
 **/
-gulp.task('build:site',  ['build:vendor', 'build:sass', 'build:js']);
+gulp.task('build:site',  ['build:vendor', 'build:sass', 'build:js', 'build:templates']);
 
 
 // OTHER TASKS
@@ -141,14 +134,12 @@ gulp.task('build:site',  ['build:vendor', 'build:sass', 'build:js']);
 gulp.task('watch', ['build:site', 'serve'], function() {
   var server = livereload();
 
-  gulp.watch([APP_DIR + '/**/*', PUBLIC_DIR + '/**/*', POST_DIR + '/**/*'])
+  gulp.watch([APP_DIR + '/**/*'])
     .on('change', function (file) {
       var filePath = './' + path.relative(__dirname, file.path);
 
-      if ( filePath.indexOf(APP_VIEWS_DIR) === 0 || filePath.indexOf(POST_DIR) === 0 ) {
+      if ( filePath.indexOf(APP_VIEWS_DIR) === 0 ) {
         gulp.run('build:templates');
-        gulp.run('build:index');
-        gulp.run('build:posts');
       } else if ( filePath.indexOf(APP_SASS_DIR) === 0 ) {
         gulp.run('build:sass');
       } else {

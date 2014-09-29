@@ -1,5 +1,5 @@
 {
-  "name": "michealbenedict.com",
+  "name": "migale",
   "version": "0.0.1",
   "description": "",
   "devDependencies": {
@@ -13,6 +13,7 @@
     "gulp-jade": "*",
     "node-static": "*",
     "through2": "*",
+    "gulp-rimraf": "*",
     "rimraf": "*",
     "main-bower-files": "*",
     "jade": "*"

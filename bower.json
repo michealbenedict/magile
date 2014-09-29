@@ -1,0 +1,15 @@
+{
+  "name": "migale",
+  "version": "0.0.1",
+  "dependencies": {
+    "normalize-css" :"*",
+    "jquery"        :"*",
+    "animate.css"   :"*",
+    "typesettings"  :"*"
+  } ,
+  "overrides": {
+    "highlight.js": {
+      "main": ["src/highlight.js", "src/styles/vs.css"]
+    }
+  }
+}

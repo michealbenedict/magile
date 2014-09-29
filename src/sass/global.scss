@@ -1,0 +1,99 @@
+@import "_variables";
+@import "_typeset";
+@import "_grid";
+@import "highlight-theme";
+
+// Specify the number of columns and set column and gutter widths
+$columns: 12;
+$column-width: 60;
+$gutter-width: 20;
+$total-width: 100%;
+
+/* Base */
+html {
+  height: 100%;
+  max-height: 100%;
+}
+
+body {
+  color: $primary-text-color;
+  height: 100%;
+  max-height: 100%;
+}
+
+/* Common */
+.u-container {
+  margin: 0 auto;
+  max-width: emRhythm(96);
+  padding: 0 emRhythm(2) 0;
+  position: relative;
+}
+
+.u-textCenter {
+  text-align: center;
+}
+
+.u-hidden {
+  display: none;
+}
+
+.u-textLeft {
+  text-align: left;
+}
+
+.u-textRight {
+  text-align: right;
+}
+
+.u-noList {
+  list-style: none;
+}
+
+a {
+  color: $primary-a-color;
+  text-decoration: none;
+}
+
+/* Fonts */
+.u-fontSourceSansPro {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.u-fontSourceSerifPro {
+  font-family: 'Source Serif Pro', sans-serif;
+}
+
+.u-primaryHeader {
+  @include setType(6, $ms-up2);
+  margin-bottom: 0;
+  // transform: scale(0.5);
+  transition: transform 1s linear;
+}
+
+.u-subHeader {
+  color: rgba(0,0,0,0.5);
+  font-weight: 700;
+  @include setType(6, $ms-down1);
+}
+
+// .u-circular {
+//   background-position: 50% 50%;
+//   background-repeat: no-repeat;
+//   border-radius: 50%;
+// }
+
+hr {
+  margin-top: emRhythm(5);
+  margin-bottom: emRhythm(5);
+  border: 0;
+  border-top: 1px solid #EEE;
+  padding: 0;
+}
+
+/* ELEMENTS */
+footer {
+  padding-bottom: emRhythm(10);
+}
+
+@import "index";
+@import "post";
+@import "nav";
