@@ -63,7 +63,7 @@ a {
 }
 
 .u-primaryHeader {
-  @include setType(6, $ms-up2);
+  @include setType(5, $ms-up1);
   margin-bottom: 0;
   // transform: scale(0.5);
   transition: transform 1s linear;
