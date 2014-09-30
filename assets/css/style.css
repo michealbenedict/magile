@@ -446,6 +446,20 @@ footer {
     font-size: 0.70721em;
     line-height: 1.414; }
 
+.Post-Embedded-content {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto; }
+  .Post-Embedded-content embed, .Post-Embedded-content iframe, .Post-Embedded-content object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px), (min-width: 320px) and (max-width: 768px) {
   .Bottom .left {
     display: inline;

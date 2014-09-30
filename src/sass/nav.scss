@@ -91,7 +91,6 @@
 and (min-device-width : 320px) 
 and (max-device-width : 480px),
 (min-width : 320px) and (max-width : 768px) {
-
   .Mast-Header {
     @include column(9);
   }
