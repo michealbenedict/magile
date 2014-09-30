@@ -26,6 +26,7 @@ const PUBLIC_DIR        = "./";
 const PUBLIC_SITE_DIR   = path.join(PUBLIC_DIR);
 const PUBLIC_JS_DIR     = path.join(PUBLIC_DIR, 'assets', 'js');
 const PUBLIC_CSS_DIR    = path.join(PUBLIC_DIR, 'assets', 'css');
+const PUBLIC_FONTS_DIR  = path.join(PUBLIC_DIR, 'assets', 'fonts');
 const PUBLIC_VENDOR_DIR = path.join(PUBLIC_DIR, 'assets', 'vendor');
 
 const APP_DIR       = "./src";
@@ -81,6 +82,15 @@ gulp.task('build:vendor', ['clean:vendor'], function () {
 });
 
 /*
+ * @task build:fonts
+ * @description Copy font files
+**/
+gulp.task('build:fonts', ['clean:vendor'], function () {
+  return gulp.src(APP_DIR + '/fonts/*')
+    .pipe(gulp.dest(PUBLIC_FONTS_DIR))
+});
+
+/*
  * @task build:sass
  * @description Run the sass preprocessor and concat to a single stylessheet
 **/
@@ -119,7 +129,7 @@ gulp.task('build:templates', ['clean:templates'], function () {
  * @task build:site
  * Generate the site
 **/
-gulp.task('build:site',  ['build:vendor', 'build:sass', 'build:js', 'build:templates']);
+gulp.task('build:site',  ['build:vendor', 'build:sass', 'build:js', 'build:fonts', 'build:templates']);
 
 
 // OTHER TASKS

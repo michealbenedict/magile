@@ -348,9 +348,54 @@ hr {
   border-top: 1px solid #EEE;
   padding: 0; }
 
-/* ELEMENTS */
+/* FOOTER */
 footer {
   padding-bottom: 3.33333em; }
+
+@font-face {
+  font-family: icons;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/icons.eot");
+  src: url("../fonts/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons.woff") format("woff"), url("../fonts/icons.ttf") format("truetype"), url("../fonts/icons.svg#icons") format("svg"); }
+
+/* ICONS */
+.icon-ghost:before,
+.icon-feed:before,
+.icon-twitter:before,
+.icon-google-plus:before,
+.icon-facebook:before {
+  font-family: 'icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none; }
+
+/* Each icon is created by inserting the corret character into the content of the :before pseudo element. Like a boss. */
+.icon-ghost:before {
+  content: "\e000"; }
+
+.icon-feed:before {
+  content: "\e001"; }
+
+.icon-twitter:before {
+  content: "\e002";
+  font-size: 1.1em; }
+
+.icon-google-plus:before {
+  content: "\e003"; }
+
+.icon-facebook:before {
+  content: "\e004"; }
+
+.Share {
+  text-align: center; }
+  .Share a {
+    margin: 0 0.66667em; }
 
 .Posts-Article {
   margin-bottom: 3.33333em; }
@@ -413,32 +458,6 @@ footer {
       padding: 1em; }
   .Post img {
     width: 100%; }
-  .Post .Author .u-subHeader {
-    line-height: 1em;
-    margin-bottom: 1.33333em; }
-  .Post .Author-image {
-    display: inline;
-    float: left;
-    width: 14.58333%;
-    margin: 0 1.04167%; }
-    .Post .Author-image div {
-      display: block;
-      width: 80px;
-      height: 80px;
-      background-size: cover;
-      border-radius: 100%;
-      text-indent: -9999px; }
-  .Post .Author-Meta {
-    display: inline;
-    float: left;
-    width: 81.25%;
-    margin: 0 1.04167%; }
-  .Post .Author-Meta-heading {
-    font-size: 1em;
-    line-height: 1.33333; }
-  .Post .Author-Meta-bio {
-    font-size: 0.70721em;
-    line-height: 1.414; }
 
 .Post-Embedded-content {
   position: relative;

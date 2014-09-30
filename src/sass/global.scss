@@ -89,10 +89,65 @@ hr {
   padding: 0;
 }
 
-/* ELEMENTS */
+/* FOOTER */
 footer {
   padding-bottom: emRhythm(10);
 }
+
+@font-face {
+  font-family: icons;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/icons.eot");
+  src: url("../fonts/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons.woff") format("woff"), url("../fonts/icons.ttf") format("truetype"), url("../fonts/icons.svg#icons") format("svg"); 
+}
+
+/* ICONS */
+.icon-ghost:before,
+.icon-feed:before,
+.icon-twitter:before,
+.icon-google-plus:before,
+.icon-facebook:before {
+  font-family: 'icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+}
+
+/* Each icon is created by inserting the corret character into the content of the :before pseudo element. Like a boss. */
+.icon-ghost:before {
+  content: "\e000"
+}
+
+.icon-feed:before {
+  content: "\e001"
+}
+
+.icon-twitter:before {
+  content: "\e002";
+  font-size: 1.1em
+}
+
+.icon-google-plus:before{
+  content: "\e003"
+}
+
+.icon-facebook:before {
+  content: "\e004"
+}
+
+.Share {
+  text-align: center;
+  a {
+    margin: 0 emRhythm(2);
+  }
+}
+
 
 @import "index";
 @import "post";

@@ -8,10 +8,16 @@ article.Post.u-container.push(class="{{post_class}}")
   {{#post}}
   header.Post-Header
     h1.u-primaryHeader.animated.fadeInDown {{{title}}}
-    time.u-subHeader(datetime="{{date format='YYYY-MM-DD'}}"){{date format="DD MMMM YYYY"}}
+    time.u-subHeader(datetime="{{date format='YYYY-MM-DD'}}"){{date format="DD MMMM YYYY"}}  
+    include ./_share.jade
+  hr
+        
   section
     {{content}}
-  // hr
+  hr
+    
+  include ./_share.jade
+      
     
   // section.Author
   //   .u-subHeader

@@ -78,35 +78,35 @@
   img {
     width: 100%;
   }
-
-  .Author {
-    .u-subHeader {
-      line-height: 1em;
-      margin-bottom: emRhythm(4);
-    }
-  }
-  .Author-image {
-    @include column(2);
-    div {
-      display: block;
-      width: 80px;
-      height: 80px;
-      background-size: cover;
-      border-radius: 100%;
-      text-indent: -9999px;
-    }
-  }
-
-  .Author-Meta {
-    @include column(10);
-  }
-  .Author-Meta-heading {
-    @include setType(4);
-  }
-  .Author-Meta-bio {
-    @include setType(3, $ms-down1);
-  }
 }
+
+// .Post-Author {
+//   .u-subHeader {
+//     line-height: 1em;
+//     margin-bottom: emRhythm(4);
+//   }
+// }
+// .Post-Author-image {
+//   @include column(2);
+//   div {
+//     display: block;
+//     width: 80px;
+//     height: 80px;
+//     background-size: cover;
+//     border-radius: 100%;
+//     text-indent: -9999px;
+//   }
+// }
+
+// .Post-Author-Meta {
+//   @include column(10);
+// }
+// .Post-Author-Meta-heading {
+//   @include setType(4);
+// }
+// .Post-Author-Meta-bio {
+//   @include setType(3, $ms-down1);
+// }
 
 .Post-Embedded-content {
   position: relative;
@@ -124,7 +124,6 @@
     height: 100%;
   }
 }
-
 
 .Post, .Post-Embedded-content {
   p, pre, iframe, & {
