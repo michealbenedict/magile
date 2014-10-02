@@ -43,7 +43,7 @@ h6, .h6 {
   padding-top: 0;
   padding-bottom: 0;
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: bold;
+  font-weight: 600;
   text-rendering: optimizeLegibility; }
 
 h1, .h1 {
@@ -187,6 +187,62 @@ body {
   body:after {
     clear: both; }
 
+.u-animation--fadeIn {
+  -webkit-animation: fadein 2s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 2s;
+  /* Internet Explorer */
+  -o-animation: fadein 2s;
+  /* Opera < 12.1 */
+  animation: fadein 2s; }
+
+.u-subHeader {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+  font-size: 0.70721em;
+  line-height: 2.828; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0; }
+
+  to {
+    opacity: 1; } }
+
 /*
 
 Style with support for rainbow parens
@@ -292,14 +348,14 @@ html {
   max-height: 100%; }
 
 body {
-  color: #343434;
+  color: #424242;
   height: 100%;
   max-height: 100%; }
 
 /* Common */
 .u-container {
   margin: 0 auto;
-  max-width: 32em;
+  max-width: 36em;
   padding: 0 0.66667em 0;
   position: relative; }
 
@@ -321,6 +377,8 @@ body {
 a {
   color: #222222;
   text-decoration: none; }
+  a:hover {
+    color: #f0563d; }
 
 /* Fonts */
 .u-fontSourceSansPro {
@@ -330,16 +388,11 @@ a {
   font-family: 'Source Serif Pro', sans-serif; }
 
 .u-primaryHeader {
-  font-size: 1.414em;
-  line-height: 1.17869;
+  font-size: 1.9994em;
+  line-height: 1.16702;
   margin-bottom: 0;
-  transition: transform 1s linear; }
-
-.u-subHeader {
-  color: rgba(0, 0, 0, 0.5);
-  font-weight: 700;
-  font-size: 0.70721em;
-  line-height: 2.828; }
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.7); }
 
 hr {
   margin-top: 1.66667em;
@@ -406,7 +459,8 @@ footer {
   .Main-Header .Main-Header-title {
     margin-bottom: 0.33333em;
     letter-spacing: 0.06667em;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-weight: 700; }
   .Main-Header .Main-Header-description {
     color: rgba(0, 0, 0, 0.6);
     font-weight: 400; }
@@ -421,43 +475,40 @@ footer {
 
 .Post {
   margin-top: 6.66667em; }
-  .Post .Post-Header {
-    text-align: center;
-    margin-bottom: 2.66667em; }
-  .Post .tweetblock {
-    margin-top: 1.33333em;
-    margin-bottom: 1.33333em; }
-  .Post figure {
-    margin: 0;
-    margin-bottom: 1em; }
-  .Post figcaption {
-    text-align: center;
-    color: rgba(0, 0, 0, 0.5);
-    font-weight: 700;
-    font-size: 0.70721em;
-    line-height: 2.828; }
-  .Post blockquote {
-    font-family: "Source Serif Pro", "Times New Roman", serif;
-    margin: 2.66667em;
-    border-left: 5px solid #23A38F;
-    letter-spacing: 0.01rem;
-    font-weight: 400;
-    font-style: italic;
-    padding-left: 20px;
-    margin-left: -23px; }
-  .Post pre {
-    font-size: 0.70721em;
-    line-height: 1.414;
-    margin-top: 0;
-    word-wrap: break-word;
-    margin-bottom: 1.33333em;
-    max-height: 33.33333em;
-    overflow-y: auto;
-    border-radius: 3px; }
-    .Post pre code {
-      padding: 1em; }
-  .Post img {
-    width: 100%; }
+
+.Post-content a {
+  text-decoration: underline; }
+.Post-content figure {
+  margin: 0;
+  margin-bottom: 1em; }
+.Post-content figcaption {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+  font-size: 0.70721em;
+  line-height: 2.828; }
+.Post-content blockquote {
+  font-family: "Source Serif Pro", "Times New Roman", serif;
+  margin: 2.66667em;
+  border-left: 5px solid #23A38F;
+  letter-spacing: 0.01rem;
+  font-weight: 400;
+  font-style: italic;
+  padding-left: 20px;
+  margin-left: -23px; }
+.Post-content pre {
+  font-size: 0.70721em;
+  line-height: 1.414;
+  margin-top: 0;
+  word-wrap: break-word;
+  margin-bottom: 1.33333em;
+  max-height: 33.33333em;
+  overflow-y: auto;
+  border-radius: 3px; }
+  .Post-content pre code {
+    padding: 1em; }
+.Post-content img {
+  width: 100%; }
 
 .Post-Embedded-content {
   position: relative;
@@ -479,6 +530,10 @@ footer {
   margin-top: 1em; }
 .Post p + h3, .Post p + h4, .Post p + h5, .Post pre + h3, .Post pre + h4, .Post pre + h5, .Post iframe + h3, .Post iframe + h4, .Post iframe + h5, .Post + h3, .Post + h4, .Post + h5, .Post-Embedded-content p + h3, .Post-Embedded-content p + h4, .Post-Embedded-content p + h5, .Post-Embedded-content pre + h3, .Post-Embedded-content pre + h4, .Post-Embedded-content pre + h5, .Post-Embedded-content iframe + h3, .Post-Embedded-content iframe + h4, .Post-Embedded-content iframe + h5, .Post-Embedded-content + h3, .Post-Embedded-content + h4, .Post-Embedded-content + h5 {
   margin-top: 1.66667em; }
+
+.Post-Header {
+  text-align: center;
+  margin-bottom: 2.66667em; }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px), (min-width: 320px) and (max-width: 768px) {
   .Bottom .left {

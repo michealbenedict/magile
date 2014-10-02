@@ -1,41 +1,11 @@
 .Post {
   margin-top: emRhythm(20);
 
-  .Post-Header {
-    text-align: center;
-    margin-bottom: emRhythm(8); 
-  }
+}
 
-  // h1, .h1 {
-  //   margin-bottom: emRhythm(4, $ms-up2);
-  //   @include setType(6, $ms-up2);
-  // }
-
-  // h2, .h2 {
-  //   margin-bottom: emRhythm(4, $ms-up1);
-  //   @include setType(5, $ms-up1);
-  // }
-
-  // h3, .h3 {
-  //   margin-bottom: emRhythm(4, $ms-up1);
-  //   @include setType(5, $ms-up1);
-  // }
-
-  // h4, .h4 {
-  //   margin-bottom: emRhythm(4, $ms-up1);
-  //   @include setType(5, $ms-up1);
-  // }
-
-  // h5, .h5,
-  // h6, .h6 {
-  //   margin-bottom: emRhythm(4);
-  //   @include setType(4);
-  // }
-
-
-  .tweetblock {
-    margin-top: emRhythm(4);
-    margin-bottom: emRhythm(4);
+.Post-content {
+  a {
+    text-decoration: underline;
   }
 
   figure {
@@ -138,6 +108,11 @@
     }
   }
 }
+
+.Post-Header {
+    text-align: center;
+    margin-bottom: emRhythm(8); 
+  }
 
 // // Smartphones (portrait and landscape)
 @media only screen 

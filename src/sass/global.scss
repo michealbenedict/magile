@@ -1,6 +1,7 @@
 @import "_variables";
 @import "_typeset";
 @import "_grid";
+@import "_animation";
 @import "highlight-theme";
 
 // Specify the number of columns and set column and gutter widths
@@ -24,7 +25,7 @@ body {
 /* Common */
 .u-container {
   margin: 0 auto;
-  max-width: emRhythm(96);
+  max-width: emRhythm(108);
   padding: 0 emRhythm(2) 0;
   position: relative;
 }
@@ -52,6 +53,9 @@ body {
 a {
   color: $primary-a-color;
   text-decoration: none;
+  &:hover {
+    color: $primary-a-hover-color;
+  }
 }
 
 /* Fonts */
@@ -63,16 +67,10 @@ a {
 }
 
 .u-primaryHeader {
-  @include setType(5, $ms-up1);
+  @include setType(7, $ms-up2);
   margin-bottom: 0;
-  // transform: scale(0.5);
-  transition: transform 1s linear;
-}
-
-.u-subHeader {
-  color: rgba(0,0,0,0.5);
-  font-weight: 700;
-  @include setType(6, $ms-down1);
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.70);
 }
 
 // .u-circular {

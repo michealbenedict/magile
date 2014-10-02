@@ -1,15 +1,13 @@
 $body-bg-color            : #ffffff;
-$primary-a-hover-color    : #ffc9c7;
-// $primary-a-color          : #F0563D;
+$primary-text-color       : #424242;
 $primary-a-color          : #222222;
-$primary-text-color       : #343434;
-$primary-text-hover-color : #ffffff;
-$white-color              : #ffffff;
+$primary-a-hover-color    : #F0563D;
+
 $font-sans: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-serif: 'Source Serif Pro', 'Times New Roman', serif;
 $font-mono: 'Consolas', Monaco, monospace;
 
-$text-color: #424242;
+$text-color: $primary-text-color;
 $base-vertical-unit: 6px;
 $base-line-multi: 4;
 $base-font-size: 18px;

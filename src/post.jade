@@ -6,15 +6,16 @@ include ./_nav.jade
 article.Post.u-container.push(class="{{post_class}}")
   {{! Everything inside the #post tags pulls data from the post }}
   {{#post}}
-  header.Post-Header
-    h1.u-primaryHeader.animated.fadeInDown {{{title}}}
+  header.Post-Header.u-animation--fadeIn
+    h1.u-primaryHeader {{{title}}}
     time.u-subHeader(datetime="{{date format='YYYY-MM-DD'}}"){{date format="DD MMMM YYYY"}}  
     include ./_share.jade
-  hr
+  
         
-  section
+  section.Post-content
     {{content}}
-  hr
+  
+  hr(style='border: 1px solid #fff')
     
   include ./_share.jade
       
