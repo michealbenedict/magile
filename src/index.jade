@@ -11,7 +11,7 @@
   .Posts
     {{#foreach posts}}
     article.Posts-Article(class="{{post_class}}" itemscope itemtype="http://schema.org/BlogPosting" role="article")
-      h1.u-primaryHeader
+      h1.u-primaryHeader.u-primaryHeader--for-index
         a(href="{{url}}"){{{title}}}
       time.u-subHeader(datetime="{{date format='YYYY-MM-DD'}}"){{date format="DD MMMM YYYY"}}
     {{/foreach}}

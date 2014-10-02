@@ -71,7 +71,19 @@ a {
   margin-bottom: 0;
   font-weight: 300;
   color: rgba(0, 0, 0, 0.70);
+
+  &.u-primaryHeader--for-index {
+    @include setType(6, $ms-up1);
+    font-weight: 600;
+  }
 }
+
+.u-subHeader {
+  color: rgba(0,0,0,0.5);
+  font-weight: 700;
+  @include setType(6, $ms-down1);
+}
+
 
 // .u-circular {
 //   background-position: 50% 50%;
@@ -88,7 +100,8 @@ hr {
 }
 
 /* FOOTER */
-footer {
+.Footer {
+  @include setType(3, $ms-down1);
   padding-bottom: emRhythm(10);
 }
 
@@ -140,6 +153,7 @@ footer {
 }
 
 .Share {
+  margin-top: emRhythm(4);
   text-align: center;
   a {
     margin: 0 emRhythm(2);

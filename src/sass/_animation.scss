@@ -6,11 +6,6 @@
             animation: fadein 2s;
 }
 
-.u-subHeader {
-  color: rgba(0,0,0,0.5);
-  font-weight: 700;
-  @include setType(6, $ms-down1);
-}
 
 // Fade in Animations
 @keyframes fadein {

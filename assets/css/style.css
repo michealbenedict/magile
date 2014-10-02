@@ -198,12 +198,6 @@ body {
   /* Opera < 12.1 */
   animation: fadein 2s; }
 
-.u-subHeader {
-  color: rgba(0, 0, 0, 0.5);
-  font-weight: 700;
-  font-size: 0.70721em;
-  line-height: 2.828; }
-
 @keyframes fadein {
   from {
     opacity: 0; }
@@ -393,6 +387,16 @@ a {
   margin-bottom: 0;
   font-weight: 300;
   color: rgba(0, 0, 0, 0.7); }
+  .u-primaryHeader.u-primaryHeader--for-index {
+    font-size: 1.414em;
+    line-height: 1.41443;
+    font-weight: 600; }
+
+.u-subHeader {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+  font-size: 0.70721em;
+  line-height: 2.828; }
 
 hr {
   margin-top: 1.66667em;
@@ -402,7 +406,9 @@ hr {
   padding: 0; }
 
 /* FOOTER */
-footer {
+.Footer {
+  font-size: 0.70721em;
+  line-height: 1.414;
   padding-bottom: 3.33333em; }
 
 @font-face {
@@ -446,6 +452,7 @@ footer {
   content: "\e004"; }
 
 .Share {
+  margin-top: 1.33333em;
   text-align: center; }
   .Share a {
     margin: 0 0.66667em; }
@@ -464,14 +471,6 @@ footer {
   .Main-Header .Main-Header-description {
     color: rgba(0, 0, 0, 0.6);
     font-weight: 400; }
-
-.Footer {
-  font-size: 0.70721em;
-  line-height: 1.414; }
-  .Footer a {
-    text-decoration: underline; }
-    .Footer a:hover {
-      text-decoration: none; }
 
 .Post {
   margin-top: 6.66667em; }
@@ -535,17 +534,6 @@ footer {
   text-align: center;
   margin-bottom: 2.66667em; }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px), (min-width: 320px) and (max-width: 768px) {
-  .Bottom .left {
-    display: inline;
-    float: left;
-    width: 97.91667%;
-    margin: 0 1.04167%; }
-  .Bottom .right {
-    display: inline;
-    float: left;
-    width: 97.91667%;
-    margin: 0 1.04167%; } }
 .Mast {
   position: fixed;
   z-index: 9999999;

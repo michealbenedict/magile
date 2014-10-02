@@ -39,7 +39,6 @@
   padding: emRhythm(20) 0;
 
   .Main-Header-title {
-    // margin-top: emRhythm(-5);
     margin-bottom: emRhythm(1);
     letter-spacing: emRhythm(0.2);
     text-transform: uppercase;
@@ -51,16 +50,5 @@
   .Main-Header-description {
     color: rgba(0,0,0, 0.6);
     font-weight: 400;
-  }
-}
-
-.Footer {
-  @include setType(3, $ms-down1);
-
-  a {
-    text-decoration: underline;
-    &:hover {
-      text-decoration: none;
-    }
   }
 }
