@@ -73,7 +73,7 @@ a {
   color: rgba(0, 0, 0, 0.70);
 
   &.u-primaryHeader--for-index {
-    @include setType(6, $ms-up1);
+    @include setType(5, $ms-up1);
     font-weight: 600;
   }
 }
