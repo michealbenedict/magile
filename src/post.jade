@@ -10,8 +10,11 @@ article.Post.u-container.push(class="{{post_class}}")
     h1.u-primaryHeader {{{title}}}
     time.u-subHeader(datetime="{{date format='YYYY-MM-DD'}}"){{date format="DD MMMM YYYY"}}  
     include ./_share.jade
+    {{#if image}}
+    div.Post-Header-Image
+      img(src="{{image}}" alt="{{{title}}}" width='100%' height='100%')
+    {{/if}}
   
-        
   section.Post-content
     {{content}}
   

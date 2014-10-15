@@ -546,6 +546,9 @@ hr {
   text-align: center;
   margin-bottom: 2.66667em; }
 
+.Post-Header-Image {
+  margin-top: 2.66667em; }
+
 .Mast {
   position: fixed;
   z-index: 9999999;
