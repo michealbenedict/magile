@@ -21,7 +21,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  line-height: 1.33333; }
+  line-height: 1.83333; }
 
 html {
   -webkit-text-size-adjust: 100%; }
@@ -458,7 +458,8 @@ hr {
     margin: 0 0.66667em; }
 
 .Posts-Article {
-  margin-bottom: 3.33333em; }
+  margin-bottom: 3.33333em;
+  text-align: center; }
 
 .Main-Header {
   text-align: center;
