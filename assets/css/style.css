@@ -489,15 +489,20 @@ hr {
     width: 100%;
     height: 100%; }
 
-.Post embed + h1, .Post embed + h2, .Post object + h1, .Post object + h2, .Post blockquote + h1, .Post blockquote + h2, .Post pre + h1, .Post pre + h2, .Post iframe + h1, .Post iframe + h2, .Post + h1, .Post + h2, .Post-Embedded-content embed + h1, .Post-Embedded-content embed + h2, .Post-Embedded-content object + h1, .Post-Embedded-content object + h2, .Post-Embedded-content blockquote + h1, .Post-Embedded-content blockquote + h2, .Post-Embedded-content pre + h1, .Post-Embedded-content pre + h2, .Post-Embedded-content iframe + h1, .Post-Embedded-content iframe + h2, .Post-Embedded-content + h1, .Post-Embedded-content + h2 {
-  margin-top: 0.33333em; }
-.Post embed + h3, .Post embed + h4, .Post object + h3, .Post object + h4, .Post blockquote + h3, .Post blockquote + h4, .Post pre + h3, .Post pre + h4, .Post iframe + h3, .Post iframe + h4, .Post + h3, .Post + h4, .Post-Embedded-content embed + h3, .Post-Embedded-content embed + h4, .Post-Embedded-content object + h3, .Post-Embedded-content object + h4, .Post-Embedded-content blockquote + h3, .Post-Embedded-content blockquote + h4, .Post-Embedded-content pre + h3, .Post-Embedded-content pre + h4, .Post-Embedded-content iframe + h3, .Post-Embedded-content iframe + h4, .Post-Embedded-content + h3, .Post-Embedded-content + h4 {
-  margin-top: 1em; }
-.Post embed + h5, .Post object + h5, .Post blockquote + h5, .Post pre + h5, .Post iframe + h5, .Post + h5, .Post-Embedded-content embed + h5, .Post-Embedded-content object + h5, .Post-Embedded-content blockquote + h5, .Post-Embedded-content pre + h5, .Post-Embedded-content iframe + h5, .Post-Embedded-content + h5 {
-  margin-top: 1.66667em; }
+.Post, .Post-Embedded-content {
+  margin-bottom: 1em; }
+  .Post embed + h1, .Post embed + h2, .Post object + h1, .Post object + h2, .Post blockquote + h1, .Post blockquote + h2, .Post iframe + h1, .Post iframe + h2, .Post + h1, .Post + h2, .Post-Embedded-content embed + h1, .Post-Embedded-content embed + h2, .Post-Embedded-content object + h1, .Post-Embedded-content object + h2, .Post-Embedded-content blockquote + h1, .Post-Embedded-content blockquote + h2, .Post-Embedded-content iframe + h1, .Post-Embedded-content iframe + h2, .Post-Embedded-content + h1, .Post-Embedded-content + h2 {
+    margin-top: 0.33333em; }
+  .Post embed + h3, .Post embed + h4, .Post object + h3, .Post object + h4, .Post blockquote + h3, .Post blockquote + h4, .Post iframe + h3, .Post iframe + h4, .Post + h3, .Post + h4, .Post-Embedded-content embed + h3, .Post-Embedded-content embed + h4, .Post-Embedded-content object + h3, .Post-Embedded-content object + h4, .Post-Embedded-content blockquote + h3, .Post-Embedded-content blockquote + h4, .Post-Embedded-content iframe + h3, .Post-Embedded-content iframe + h4, .Post-Embedded-content + h3, .Post-Embedded-content + h4 {
+    margin-top: 1em; }
+  .Post embed + h5, .Post object + h5, .Post blockquote + h5, .Post iframe + h5, .Post + h5, .Post-Embedded-content embed + h5, .Post-Embedded-content object + h5, .Post-Embedded-content blockquote + h5, .Post-Embedded-content iframe + h5, .Post-Embedded-content + h5 {
+    margin-top: 1.66667em; }
 
 .Post-content {
-  color: #525252; }
+  color: #525252;
+  font-weight: 300; }
+  .Post-content h1, .Post-content h2, .Post-content h3, .Post-content h4, .Post-content h5 {
+    color: #424242; }
   .Post-content h1, .Post-content h2 {
     font-size: 1.9994em;
     line-height: 1.25038; }
@@ -521,7 +526,6 @@ hr {
     line-height: 2.828; }
   .Post-content blockquote {
     font-family: "Source Serif Pro", "Times New Roman", serif;
-    margin: 2.66667em;
     border-left: 5px solid #23A38F;
     letter-spacing: 0.01rem;
     font-weight: 400;
